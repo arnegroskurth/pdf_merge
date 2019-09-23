@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+APPDIR="$(dirname "$(readlink -e "$0")")"
+
+export LD_LIBRARY_PATH="${APPDIR}/usr/lib/:${LD_LIBRARY_PATH}"
+export PATH="${APPDIR}/usr/bin:${PATH}"
+
+exec "${APPDIR}/usr/bin/python3" "${APPDIR}/pdf_merge.py" "$@"
