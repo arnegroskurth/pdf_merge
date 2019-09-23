@@ -30,7 +30,7 @@ if not input_file_paths:
 
 pages_csv_file = None
 if pages_csv_path:
-    pages_csv_file = open(pages_csv_path, "wb")
+    pages_csv_file = open(pages_csv_path, "w")
     pages_csv_file.write("File%sPages\n" % pages_csv_separator)
 
 output_document = PdfFileWriter()
