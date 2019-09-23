@@ -1,0 +1,6 @@
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y build-essential wget
+install: ./AppImage/build.sh
+script:
+  - ./build/pdf_merge.AppImage -i ./test -o test.pdf -m 2 --pages-csv pages.csv -v
