@@ -1,5 +1,7 @@
 # pdf_merge
 
+[![Build Status](https://travis-ci.org/arnegroskurth/pdf_merge.svg?branch=master)](https://travis-ci.org/arnegroskurth/pdf_merge)
+
 This is a small tool for merging together pdf files.
 
 ```
