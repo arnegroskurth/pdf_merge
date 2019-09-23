@@ -27,6 +27,18 @@ optional arguments:
 
 ```
 
+## Why?
+
+- __Insert blank pages for print__
+
+  I wanted to concatenate a large number of scientific publications into a single pdf ready to be printed at the copy-shop. Additionally, I want to print double-sided and/or in a _n-pages-on-1_-fashion while being able to afterwards separate the individual publications out again without them overlapping within on a single physical piece of paper. The `--modulo MODULO` argument solves this problem.
+
+  E.g.: If you want to print _4-pages-on-1_ double-sided you want to use a modulus of _4 * 2 = 8_.
+
+- __Extract page counts__
+
+  Moreover, I might want to exclude some publications from the print e.g. in case they are just an article within a book that I have as a complete pdf in my bibliography software. Using the `--pages-csv` argument helps to find those input files with unreasonable page counts which I then can exclude from the print.
+
 ## AppImage
 
 This tool comes with a build-script to package it up as an [AppImage](https://appimage.org/).
