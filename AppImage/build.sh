@@ -11,8 +11,6 @@ BUILD_DIR=${ROOT_DIR}/build
 APP_DIR=${BUILD_DIR}/.AppDir
 mkdir -p "${APP_DIR}"
 
-sudo apt-get install -y build-essential
-
 # Download and build Python
 cd "${BUILD_DIR}" || exit 1
 if [ ! -f "Python-${PYTHON_VERSION}.tgz" ]; then
