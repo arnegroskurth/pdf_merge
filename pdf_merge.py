@@ -8,7 +8,7 @@ parser = ArgumentParser(description="Merges together a bunch of pdf files.")
 
 parser.add_argument("-i", "--input-path", dest="input_path", default=".", help="Read source pdfs from PATH.", metavar="PATH")
 parser.add_argument("-o", "--output-path", dest="output_path", default="merged.pdf", help="Write merged pdf to PATH. Default: './merged.pdf'.", metavar="PATH")
-parser.add_argument("-m", "--modulo", type=int, dest="modulo", help="Adds enough pages to the end of each document to fulfil nPages %% MODULO == 0.", metavar="MODULO")
+parser.add_argument("-m", "--modulo", type=int, dest="modulo", help="Adds pages to the end of each document to fulfil (nPages %% MODULO == 0) for each merged document.", metavar="MODULO")
 parser.add_argument("--pages-csv", dest="pages_csv_path", help="Write input file page counts into 'PATH.csv'. ('Do I really want to include that in my file?)", metavar="PATH")
 parser.add_argument("--pages-csv-separator", dest="pages_csv_separator", default=";", help="Use given CSV separator. Defaults to ';'.")
 parser.add_argument("-v", "--verbose", dest="verbose", help="Turn on verbose output.", action="store_true")
