@@ -28,6 +28,14 @@ make -j && make install
 # Install dependencies
 "${APP_DIR}"/usr/bin/pip3 install -r "${ROOT_DIR}"/requirements.txt
 
+# see: https://stackoverflow.com/questions/45978113/pypdf2-write-doesnt-work-on-some-pdf-files-python-3-5-1
+PDF_PY="${APP_DIR}/usr/lib/python3.7/site-packages/PyPDF2/pdf.py"
+if grep -Fq "#if self.strict:" "${PDF_PY}" # idempotence
+then
+  cp "${PDF_PY}" "${PDF_PY}.bak"
+  patch "${PDF_PY}" < "${THIS_DIR}/pdf.py.patch"
+fi
+
 # Get appimagetool
 cd "${BUILD_DIR}" || exit 1
 if [ ! -f "appimagetool" ]; then
