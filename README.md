@@ -46,7 +46,7 @@ This tool comes with a build-script to package it up as an [AppImage](https://ap
 This might seem to be a little over-engineered for such a simple tool but I just wanted to take the chance to play around with this otherwise really promising technology.
 
 ```bash
-$ ./build/AppImage/build.sh
+$ ./AppImage/build.sh
 ...
 
 Result: .../build/pdf_merge.AppImage
